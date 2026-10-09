@@ -17,12 +17,12 @@ Para actualizar el kit después, descargar el ZIP nuevo y volver a correr `INSTA
 | Qué | Dónde queda |
 |---|---|
 | Reglas de trabajo y escritura (CLAUDE.md) | `~\.claude\CLAUDE.md` (si ya había uno, lo respeta y deja respaldo) |
-| 42 skills propias y de terceros | `~\.claude\skills\` |
+| 43 skills propias y de terceros | `~\.claude\skills\` |
 | Colección Vibe CPA (46 skills fiscales), bajada del repo oficial | `~\.claude\skills\vibe-cpa-pack\` |
 | Cerebro (vault de Obsidian: negocio, voz, fiscal, plantillas, clientes, diario) | `Documentos\BookkeepingAlDia-Cerebro\` |
 | Permisos: editar archivos y usar Python sin preguntar cada vez | `~\.claude\settings.json` |
 
-Skills propias (escritas para Bookkeeping al Día): `foreign-owned-llc-analyzer`, `eci-determination`, `form-5472-reviewer`, `1120-proforma-preparation`, `1065-foreign-partners`, `qbo-monthly-auditor` (con script de revisión probado), `llc-compliance-calendar`.
+Skills propias (escritas para Bookkeeping al Día): `aprender-de-johan` (se ajusta a sus correcciones y aprobaciones), `foreign-owned-llc-analyzer`, `eci-determination`, `form-5472-reviewer`, `1120-proforma-preparation`, `1065-foreign-partners`, `qbo-monthly-auditor` (con script de revisión probado), `llc-compliance-calendar`.
 
 De terceros (MIT): Receiptor `bookkeeping-skills` (13) y 20 de Open Accountant. Voz y ventas de Johan: `bookkeeping-sales-mentor`, `humanize-writing`.
 

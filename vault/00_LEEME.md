@@ -7,7 +7,7 @@ Esta carpeta es la memoria de Claude para el trabajo de Johan. Johan solo escrib
 | Carpeta | Qué hay | Quién la escribe |
 |---|---|---|
 | `01_Negocio` | Quién es Bookkeeping al Día, servicios, cliente ideal, marca | Johan y Claude |
-| `02_Voz-y-Escritura` | Cómo suena Johan por email y WhatsApp, y las reglas contra el tono de IA | Johan y Claude |
+| `02_Voz-y-Escritura` | Cómo suena Johan, reglas contra el tono de IA, `Preferencias-aprendidas` (lo que Claude aprende de sus correcciones) y `Muestras` | Johan y Claude |
 | `03_Fiscal` | Datos mínimos de diagnóstico, fuentes oficiales, mapa de skills | Claude |
 | `04_Plantillas` | Correos y estructura de informes listos para adaptar | Johan y Claude |
 | `05_Clientes` | Una nota por cliente: entidad, dueño, años presentados, pendientes | Claude |
@@ -25,4 +25,4 @@ Esta carpeta es la memoria de Claude para el trabajo de Johan. Johan solo escrib
 
 ## Para Johan
 
-No hay que aprenderse nada. Escribe el problema como se lo dirías a un asistente: "prepárame el correo para Carlos con los reportes de septiembre", "revisa este QuickBooks", "qué le toca a esta LLC". Si Claude necesita algo, pregunta una sola cosa.
+No hay que aprenderse nada. Escribe el problema como se lo dirías a un asistente: "prepárame el correo para Carlos con los reportes de septiembre", "revisa este QuickBooks", "qué le toca a esta LLC". Si Claude necesita algo, pregunta una sola cosa. Si algo no le gusta, solo dice "así no, más corto" o "así sí": Claude lo anota y la próxima vez ya sale bien.

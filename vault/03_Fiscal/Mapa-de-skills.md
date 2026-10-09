@@ -30,6 +30,10 @@ Claude elige solo. Esta tabla sirve para saber qué hay instalado.
 
 `humanize-writing` (siempre en textos largos), `bookkeeping-sales-mentor` (responder chats de cliente, objeciones, precios, seguimientos).
 
+## Aprende de Johan
+
+`aprender-de-johan`: cada corrección o aprobación queda guardada en `02_Voz-y-Escritura/Preferencias-aprendidas.md` y la próxima vez ya sale ajustado.
+
 ## Todavía no instalado a propósito
 
 Conexión directa a QuickBooks Online por MCP. Se hace en una segunda fase, solo lectura y con credenciales de Johan. Ver `docs/FASE2-QuickBooks.md` en el repositorio del kit.

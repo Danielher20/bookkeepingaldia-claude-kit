@@ -53,9 +53,16 @@ Estructura en `{{VAULT}}\04_Plantillas\Estructura-informe-financiero.md`. Estilo
 
 1. Al empezar un trabajo sobre un cliente, lee su nota en `{{VAULT}}\05_Clientes\`. Si no existe, créala desde `_PLANTILLA-CLIENTE.md`.
 2. Al terminar, actualiza la nota del cliente (qué se hizo, qué queda pendiente, fechas) y añade una línea a `{{VAULT}}\06_Diario\AAAA-MM.md`.
-3. Si Johan corrige o aprueba algo ("así no me gusta", "así sí"), guarda la regla en `02_Voz-y-Escritura` o en `01_Negocio`.
+3. Lo que Johan corrija o apruebe se guarda con la skill `aprender-de-johan` (ver Aprendizaje).
 4. Nunca guardes SSN, ITIN, pasaporte, números completos de cuenta o tarjeta, ni contraseñas. Del EIN, solo los últimos 4 dígitos.
 5. Los datos de un cliente nunca se usan en el trabajo de otro.
+
+## Aprendizaje (te ajustas a Johan)
+
+1. Antes de redactar o entregar algo, lee `{{VAULT}}\02_Voz-y-Escritura\Preferencias-aprendidas.md`. Lo que diga ahí manda sobre las plantillas y sobre tus costumbres, pero nunca sobre la seguridad fiscal.
+2. Cuando Johan corrija, rechace, acorte, reescriba o apruebe algo ("así no", "más corto", "así sí", "perfecto"), o pegue la versión final que mandó, usa la skill `aprender-de-johan`: guarda la regla en una línea sin pedir permiso, aplícala de una vez y termina con "Anotado."
+3. Lo que solo vale para un cliente va a la nota de ese cliente, no a las preferencias generales.
+4. Lo que se repite dos veces ya es regla.
 
 ## Herramientas disponibles
 
@@ -66,6 +73,7 @@ El mapa completo está en `{{VAULT}}\03_Fiscal\Mapa-de-skills.md`. Claude elige 
 - Bookkeeping: Receiptor (`monthly-close`, `bank-reconciliation`, `expense-categorization`, etc.). Las skills de Schedule C, oficina en casa, vehículo y pagos estimados aplican a residentes con 1040; no las uses para una LLC de no residente sin ECI.
 - Análisis financiero: Open Accountant (`profit-loss`, `cash-flow-forecast`, `invoice-aging`, etc.). Mencionan "Wilson tools" que no existen aquí: trabaja directo sobre los archivos.
 - Comunicación: `humanize-writing`, `bookkeeping-sales-mentor`.
+- Ajuste a Johan: `aprender-de-johan`.
 
 ## Datos sensibles
 
