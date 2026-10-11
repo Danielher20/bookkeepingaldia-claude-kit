@@ -11,7 +11,6 @@ Claude elige solo. Esta tabla sirve para saber qué hay instalado.
 | "5472", "aportes y retiros del dueño" | `form-5472-reviewer` |
 | "1120 pro forma", "armar el paquete", "7004" | `1120-proforma-preparation` |
 | "1065", "K-1", "socio extranjero" | `1065-foreign-partners` |
-| "Revisa el QuickBooks", "auditar el mes" | `qbo-monthly-auditor` |
 | "Calendario", "qué vence este mes" | `llc-compliance-calendar` |
 
 ## Investigación fiscal (colección Vibe CPA, plugin `vibe-cpa-pack`)
@@ -33,7 +32,3 @@ Claude elige solo. Esta tabla sirve para saber qué hay instalado.
 ## Aprende de Johan
 
 `aprender-de-johan`: cada corrección o aprobación queda guardada en `02_Voz-y-Escritura/Preferencias-aprendidas.md` y la próxima vez ya sale ajustado.
-
-## Todavía no instalado a propósito
-
-Conexión directa a QuickBooks Online por MCP. Se hace en una segunda fase, solo lectura y con credenciales de Johan. Ver `docs/FASE2-QuickBooks.md` en el repositorio del kit.

@@ -25,4 +25,4 @@ Esta carpeta es la memoria de Claude para el trabajo de Johan. Johan solo escrib
 
 ## Para Johan
 
-No hay que aprenderse nada. Escribe el problema como se lo dirías a un asistente: "prepárame el correo para Carlos con los reportes de septiembre", "revisa este QuickBooks", "qué le toca a esta LLC". Si Claude necesita algo, pregunta una sola cosa. Si algo no le gusta, solo dice "así no, más corto" o "así sí": Claude lo anota y la próxima vez ya sale bien.
+No hay que aprenderse nada. Escribe el problema como se lo dirías a un asistente: "prepárame el correo para Carlos con los reportes de septiembre", "revisa este balance", "qué le toca a esta LLC". Si Claude necesita algo, pregunta una sola cosa. Si algo no le gusta, solo dice "así no, más corto" o "así sí": Claude lo anota y la próxima vez ya sale bien.

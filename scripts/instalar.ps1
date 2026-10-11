@@ -68,15 +68,31 @@ if (-not $cfg) { $cfg = New-Object psobject }
 if (-not $cfg.PSObject.Properties["permissions"]) { $cfg | Add-Member -NotePropertyName permissions -NotePropertyValue (New-Object psobject) }
 $p = $cfg.permissions
 function Union($actual, $nuevos) { $l = New-Object System.Collections.ArrayList; foreach ($x in @($actual) + @($nuevos)) { if ($x -and -not $l.Contains($x)) { [void]$l.Add($x) } }; ,@($l) }
-$allow = Union $p.allow @("WebSearch", "WebFetch", "Bash(python *)", "Bash(py *)", "Bash(pip install *)", "Bash(pip *)")
+$allow = Union $p.allow @("WebSearch", "WebFetch")
 $dirs = Union $p.additionalDirectories @($VaultDir)
 foreach ($pair in @(@("allow", $allow), @("additionalDirectories", $dirs), @("defaultMode", "acceptEdits"))) {
     if ($p.PSObject.Properties[$pair[0]]) { $p.($pair[0]) = $pair[1] } else { $p | Add-Member -NotePropertyName $pair[0] -NotePropertyValue $pair[1] }
 }
-[IO.File]::WriteAllText($setPath, ($cfg | ConvertTo-Json -Depth 20), $utf8)
-Ok "Edicion de archivos y herramientas de oficina sin preguntar; el cerebro queda accesible"
+Ok "Edicion de archivos sin preguntar; el cerebro queda accesible"
 
-# 5. Coleccion Vibe CPA (se baja del repo oficial, no va dentro de este kit) -------------
+# 5. Memoria al iniciar cada sesion (hook SessionStart) ------------------------
+Paso "Memoria automatica"
+$bkad = Join-Path $ClaudeDir "bkad"
+New-Item -ItemType Directory -Force $bkad | Out-Null
+$recordar = Join-Path $bkad "recordar.ps1"
+Copy-Item (Join-Path $kit "scripts\recordar.ps1") $recordar -Force
+$cmd = "powershell -NoProfile -ExecutionPolicy Bypass -File `"$recordar`" -VaultDir `"$VaultDir`""
+if (-not $cfg.PSObject.Properties["hooks"]) { $cfg | Add-Member -NotePropertyName hooks -NotePropertyValue (New-Object psobject) }
+$previos = @()
+if ($cfg.hooks.PSObject.Properties["SessionStart"]) { $previos = @($cfg.hooks.SessionStart | Where-Object { -not (($_ | ConvertTo-Json -Depth 10) -match "recordar\.ps1") }) }
+$nuestro = [pscustomobject]@{ hooks = @([pscustomobject]@{ type = "command"; command = $cmd; timeout = 20 }) }
+$lista = @($previos) + @($nuestro)
+if ($cfg.hooks.PSObject.Properties["SessionStart"]) { $cfg.hooks.SessionStart = $lista } else { $cfg.hooks | Add-Member -NotePropertyName SessionStart -NotePropertyValue $lista }
+[IO.File]::WriteAllText($setPath, ($cfg | ConvertTo-Json -Depth 20), $utf8)
+$prueba = powershell -NoProfile -ExecutionPolicy Bypass -File $recordar -VaultDir $VaultDir | Out-String
+if ($prueba -match "MEMORIA DE JOHAN" -and $prueba -match "Preferencias-aprendidas") { Ok "Claude recibe la memoria de Johan al abrir cada sesion" } else { Falla "El hook de memoria no devolvio nada" }
+
+# 6. Coleccion Vibe CPA (se baja del repo oficial, no va dentro de este kit) -------------
 Paso "Coleccion fiscal Vibe CPA"
 if ($SinPlugin) { Write-Host "   (omitido por -SinPlugin)" -ForegroundColor Yellow } else {
     $vibeDst = Join-Path $skillsDst "vibe-cpa-pack"
@@ -102,7 +118,7 @@ if ($SinPlugin) { Write-Host "   (omitido por -SinPlugin)" -ForegroundColor Yell
     finally { if (Test-Path $tmp) { Remove-Item $tmp -Recurse -Force -ErrorAction SilentlyContinue } }
 }
 
-# 6. Resumen -------------------------------------------------------------------
+# 7. Resumen -------------------------------------------------------------------
 Paso "Resumen"
 if ($fallas.Count -eq 0) {
     Write-Host "   TODO INSTALADO. Abre Claude, entra a la carpeta del cerebro y escribe tu primer mensaje:" -ForegroundColor Green
