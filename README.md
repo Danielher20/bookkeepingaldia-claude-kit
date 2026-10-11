@@ -20,8 +20,7 @@ Para actualizar el kit después, descargar el ZIP nuevo y volver a correr `INSTA
 | 42 skills propias y de terceros | `~\.claude\skills\` |
 | Colección Vibe CPA (46 skills fiscales), bajada del repo oficial | `~\.claude\skills\vibe-cpa-pack\` |
 | Cerebro (vault de Obsidian: negocio, voz, fiscal, plantillas, clientes, diario) | `Documentos\BookkeepingAlDia-Cerebro\` |
-| Permisos (editar archivos sin preguntar) y hook de memoria al iniciar cada sesión | `~\.claude\settings.json`, `~\.claude\bkad\recordar.ps1` |kad
-ecordar.ps1` |
+| Permisos (editar archivos sin preguntar) y hook de memoria al iniciar cada sesión | `~\.claude\settings.json`, `~\.claude\bkad\recordar.ps1` |
 
 Skills propias (escritas para Bookkeeping al Día): `aprender-de-johan` (se ajusta a sus correcciones y aprobaciones), `foreign-owned-llc-analyzer`, `eci-determination`, `form-5472-reviewer`, `1120-proforma-preparation`, `1065-foreign-partners`, `llc-compliance-calendar`.
 
